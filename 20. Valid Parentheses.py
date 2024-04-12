@@ -1,4 +1,4 @@
-class Solution:
+class Solution(object):
     def isValid(self, s):
         stack = []
         mapping = {')': '(', '}': '{', ']': '['}
@@ -9,7 +9,7 @@ class Solution:
                     return False
             else:
                 stack.append(char)
-        return True
+        return len(stack) == 0
 
 
 solution = Solution()
